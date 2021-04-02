@@ -27,6 +27,7 @@ const CheckOut = () => {
             AuthorName: findBook.AuthorName,
             Price: findBook.Price,
             Photo_URL: findBook.Photo_URL,
+            Date: new Date(),
         }
 
         axios.post(`https://infinite-ravine-31515.herokuapp.com/addOrder`, newOrder)

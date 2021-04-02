@@ -33,7 +33,7 @@ const Orders = () => {
 
     const handelDelet = (id) => {
         console.log(id);
-        fetch(`https://infinite-ravine-31515.herokuapp.com/deletBook/${id}`, {
+        fetch(`https://infinite-ravine-31515.herokuapp.com/deletOrder/${id}`, {
             method: 'DELETE',
         })
             .then(res => res.json())
@@ -52,6 +52,7 @@ const Orders = () => {
                             <TableRow>
                                 <TableCell>Book Name</TableCell>
                                 <TableCell>Author Name</TableCell>
+                                <TableCell>Date</TableCell>
                                 <TableCell>Price</TableCell>
                                 <TableCell>Action</TableCell>
                             </TableRow>
@@ -62,6 +63,7 @@ const Orders = () => {
                                     <TableRow key={book?._id}>
                                         <TableCell>{book?.BookName}</TableCell>
                                         <TableCell>{book?.AuthorName}</TableCell>
+                                        <TableCell>{book?.Date}</TableCell>
                                         <TableCell>${book?.Price}</TableCell>
                                         <TableCell>
                                             <Button

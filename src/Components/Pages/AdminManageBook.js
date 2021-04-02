@@ -21,7 +21,7 @@ const AdminManageBook = () => {
     const [books, setBooks] = useState()
 
     useEffect(() => {
-        fetch(`http://localhost:5055/books`)
+        fetch(`https://infinite-ravine-31515.herokuapp.com/books`)
             .then(res => res.json())
             .then(data => setBooks(data))
     }, []);
@@ -30,7 +30,7 @@ const AdminManageBook = () => {
 
     const handelDelet = (id) => {
         console.log(id);
-        fetch(`http://localhost:5055/deletBook/${id}`, {
+        fetch(`https://infinite-ravine-31515.herokuapp.com/deletBook/${id}`, {
             method: 'DELETE',
         })
             .then(res => res.json())

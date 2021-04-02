@@ -10,7 +10,7 @@ const CheckOut = () => {
     const [user] = useContext(UserContext);
 
     useEffect(() => {
-        fetch(`http://localhost:5055/books`)
+        fetch(`https://infinite-ravine-31515.herokuapp.com/books`)
             .then(res => res.json())
             .then(data => setBooks(data))
     }, []);
@@ -29,7 +29,7 @@ const CheckOut = () => {
             Photo_URL: findBook.Photo_URL,
         }
 
-        axios.post(`http://localhost:5055/addOrder`, newOrder)
+        axios.post(`https://infinite-ravine-31515.herokuapp.com/addOrder`, newOrder)
             .then(response => {
                 console.log(response);
             })

@@ -24,7 +24,7 @@ const Orders = () => {
     const [user] = useContext(UserContext);
 
     useEffect(() => {
-        fetch(`http://localhost:5055/orders/${user.email}`)
+        fetch(`https://infinite-ravine-31515.herokuapp.com/orders/${user.email}`)
             .then(res => res.json())
             .then(data => setBooks(data))
     }, [user.email]);
@@ -33,7 +33,7 @@ const Orders = () => {
 
     const handelDelet = (id) => {
         console.log(id);
-        fetch(`http://localhost:5055/deletBook/${id}`, {
+        fetch(`https://infinite-ravine-31515.herokuapp.com/deletBook/${id}`, {
             method: 'DELETE',
         })
             .then(res => res.json())

@@ -24,7 +24,7 @@ const SignUp = ({ handleChange }) => {
             Photo_URL: Photo_URL,
         }
 
-        axios.post(`http://localhost:5055/admin/addBook`, bookData)
+        axios.post(`https://infinite-ravine-31515.herokuapp.com/admin/addBook`, bookData)
             .then(response => {
                 console.log(response);
             })
